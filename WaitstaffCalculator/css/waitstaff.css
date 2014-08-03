@@ -1,0 +1,74 @@
+/* David Prager Branner */
+/* 20140803 */
+
+h1,h2 {
+  text-align: center;
+}
+
+.container {
+  width: 60%;
+  display: table;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+
+.rowlike:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.rowlike {
+  display: table-row;
+}
+
+.celllike {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.boxed {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 90%;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 70%;
+  text-align: right;
+}
+
+input[type="number"] {
+ width: 20%;
+}
+
+.buttons {
+  float: right;
+  clear: both;
+  padding: 10px;
+}
+
+.tiny {
+  font-size: xx-small;
+}
+
+#resetButtonCell {
+  width: 60%
+}

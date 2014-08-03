@@ -1,0 +1,27 @@
+body {
+  margin-left: 10px;
+}
+
+table {
+  border-collapse:collapse;
+}
+td {
+  padding: 0px 10px;
+  border: 1px solid black;
+}
+
+.winter {
+  background-color: white;
+}
+
+.spring {
+  background-color: #4c2;
+}
+
+.summer {
+  background-color: #fa4;
+}
+
+.fall {
+  background-color: #a84;
+}

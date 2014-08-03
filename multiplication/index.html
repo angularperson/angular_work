@@ -1,0 +1,38 @@
+<!-- David Prager Branner -->
+<!-- 20140727 -->
+
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="UTF-8">
+  <title>Multiplication Table</title>
+  <link rel="stylesheet" href="css/multiplication.css">
+</head>
+
+<body>
+  <section ng-controller="DisplayCtrl">
+    <div ng-if="content">{{ content }}</div>
+    <div ng-if="!content">...</div>
+  </section>
+  <section ng-controller="MultiplicationCtrl" initial-number-limit="10">
+    <input type="number" ng-model="numberLimit" placeholder="Enter a number"
+        required autocomplete="off"/>
+    <table>
+      <tbody>
+        <tr ng-repeat="numberA in numbers">
+          <td ng-repeat="numberB in numbers"
+            ng-click="setActiveNumber(compute(numberA, numberB))"
+            ng-mouseleave="clearActiveFactors()"
+            ng-mouseover="setActiveFactors(numberA, numberB)"
+            ng-class="{hover: matchesFactor(numberA, numberB)}">
+            {{ compute(numberA, numberB) }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+  <script src="js/myApp.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+  margin-left: 10px;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th,#name {
+  background-color: lightgrey;
+}
+
+th,td {
+  border: 1px solid black;
+  word-wrap: break-word;
+}
+
+td {
+  text-align: right;
+}

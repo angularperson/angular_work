@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- David Prager Branner -->
+<!-- 20140726 -->
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/countries_data.css" />
+  <title>Countries Data</title>
+</head>
+<body ng-app="myApp">
+  <h1>Asst. 1.2.6 #3. Challenge Three: Countries Data</h1>
+  <article ng-controller="oneController">
+    <table ng-init="years=['1960', '1970', '1980', '1990', '2000', '2010']">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th ng-repeat="year in years">{{ year }} </th>
+          <th>% growth, 1960–10</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="country in countries | orderBy: 'name'">
+          <td id="name">{{ country.name }}</td>
+          <td ng-repeat="year in years">{{ country[year] | number: 0}}</td>
+          <td>{{ (100 * (country[years[years.length-1]] - country[years[0]]) / 
+            country[years[0]]) | number : 0}}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+  <script type="text/javascript" src="js/angular.js"></script>
+  <script type="text/javascript" src="js/countries_data.js"></script>
+</body>
+</html>
